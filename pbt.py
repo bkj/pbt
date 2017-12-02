@@ -46,9 +46,9 @@ class Worker():
         self._history['h'].append(self.h.data.numpy().copy())
         self._history['score'].append(self.eval())
     
-    
     def step(self):
         """ Take an optimization step, given current hyperparemeters and surrogate objective """
+        
         self._log()
         
         self._opt.zero_grad()
@@ -169,8 +169,3 @@ plot_theta(ax4, grid, 'grid')
 _ = plt.tight_layout(pad=1)
 
 show_plot()
-
-
-
-
-
